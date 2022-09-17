@@ -10,17 +10,17 @@
     overflow-x: hidden;
 }
 
-.detras{
+.detras {
     rotate: -20deg;
     position: relative;
     bottom: -40px;
     z-index: 0;
     font-size: xxx-large;
-    font-family: 'Koulen';
+    font-family: "Koulen";
     color: yellow;
     text-shadow: 0 0 5px black;
 }
-.detras2{
+.detras2 {
     rotate: -20deg;
     position: absolute;
     z-index: -14;
@@ -30,10 +30,9 @@
     font-family: "Koulen";
     color: yellow;
     text-shadow: 0 0 5px black;
-    /* filter: brightness(0.5); */
     opacity: 0.2;
 }
-.detras3{
+.detras3 {
     rotate: 28deg;
     position: absolute;
     z-index: -3;
@@ -44,7 +43,6 @@
     opacity: 0.2;
 }
 .App {
-    background: url(https://img.freepik.com/foto-gratis/fondo-abstracto-hojas-palma-sombras-pared-blanca_1182-1084.jpg?w=1380&t=st=1662987143~exp=1662987743~hmac=1bb5603…);
     background: url(/img/7171197.jpg);
     background-position: left;
     background-size: cover;
@@ -67,12 +65,9 @@
         background-clip: text;
         padding-top: 92px;
         position: relative;
-/*         background: linear-gradient(45deg, #0000000f, transparent);
-        background: linear-gradient(45deg, rgb(0 0 0 / 22%), transparent); */
         border: none;
         box-shadow: none;
-        /*    background: none; */
-        .monster{
+        .monster {
             position: absolute;
             top: 0px;
             left: -9px;
@@ -86,7 +81,9 @@
             font-size: large;
             color: black;
             font-family: "Oswald";
-            /*             background: #ffffffba; */
+            i {
+                margin-right: 3px;
+            }
         }
         .text-background {
             -webkit-background-clip: text;
@@ -94,10 +91,7 @@
             margin-top: -116px;
             background-size: cover;
             background-position: -5px;
-/*             animation-name: textbackground;
-            animation-duration: 4s;
-            animation-iteration-count: infinite; */
-            background-image: url(/img/fondoweb.jpg);
+            background-image: url(/img/fondoweb3.jpg);
             rotate: -10deg;
             z-index: -1;
             position: relative;
@@ -127,7 +121,6 @@
             background: gainsboro;
             width: fit-content;
             border-radius: 10px 0px 0px 10px;
-            /* line-height: 0; */
             padding: 5px 20px;
             margin-bottom: 0px;
             top: 50%;
@@ -147,31 +140,25 @@
             border: 32px solid #ffcc6e;
             color: white;
             position: relative;
-            //dudoso abajo
-            /* box-sizing: border-box; */
             border-radius: 5px;
             border: 32px solid #ffffff;
             color: white;
             position: relative;
             box-shadow: inset 0 0 5px black;
             border-radius: 50%;
-    object-fit: cover;
-    box-sizing: content-box;
-    width: 271px;
-    height: 271px;
-    display: block;
-    margin: auto;
-    margin-top: 1px;
-    border: 4px solid #ffcc6e;
-    /* border: 32px solid #ffcc6e; */
-    color: white;
-    position: relative;
-    /* box-sizing: border-box; */
-    /* border-radius: 5px; */
-    /* border: 32px solid #ffffff; */
-    color: white;
-    position: relative;
-    box-shadow: 5px 4px 5px black;
+            object-fit: cover;
+            box-sizing: content-box;
+            width: 271px;
+            height: 271px;
+            display: block;
+            margin: auto;
+            margin-top: 1px;
+            border: 4px solid #ffcc6e;
+            color: white;
+            position: relative;
+            color: white;
+            position: relative;
+            box-shadow: 5px 4px 5px black;
             &:active {
                 opacity: 0.8;
                 cursor: pointer;
@@ -214,10 +201,6 @@
             display: block;
             font-size: xx-large;
             font-weight: bold;
-            /*             background: linear-gradient(283deg, rgba(255, 165, 0, 0.3215686275), transparent);
-            background: linear-gradient(283deg, transparent, rgb(255 196 88), transparent);
-            background: linear-gradient(283deg, rgb(255 196 88 / 72%), transparent);
-            border: 8px solid #fffbf8; */
             border-radius: 6px;
             padding: 10px;
             font-family: "Questrial";
@@ -233,8 +216,6 @@
             font-family: Josefin Sans;
             color: #000000;
             color: white;
-            /*             color: #f9d91f; */
-            /* text-shadow: 0 0 2px #000000b0; */
             text-shadow: 0 0 5px #c8ff00;
             text-shadow: 0 0 5px #0000003b;
             i {
@@ -278,8 +259,6 @@
 .techs {
     overflow: auto;
     margin: 32px 0px -20px -2px;
-/*     border-top: 5px solid #ff00003d;
-    border-bottom: 5px solid #ffd70066; */
     li {
         position: relative;
         top: 0px;
@@ -288,7 +267,7 @@
         font-size: xx-large;
         border: none;
         color: white;
-        display:inline-block;
+        display: inline-block;
         &:nth-child(1) {
             text-shadow: 9px -5px red;
             color: gold;
@@ -299,7 +278,6 @@
         }
         &:hover {
             color: gold !important;
-           /*  font-size: 60px; */
         }
     }
     &::-webkit-scrollbar {
@@ -309,7 +287,6 @@
 .fondowrapper {
     padding: 40px 0px;
     margin-top: 40px;
-/*     box-shadow: inset 0 0 5px rgb(0 0 0 / 24%); */
     background-image: url("../img/stripes2.jpg");
     background-size: cover;
     box-sizing: border-box;
