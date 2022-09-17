@@ -1,0 +1,194 @@
+@keyframes textbackground {
+    0% {
+        /* filter: contrast(1.5); */
+        background-position: -0;
+    }
+    60% {
+        /*  filter: contrast(1); */
+        background-position: -130px;
+    }
+    100% {
+        /*  filter: contrast(1); */
+        background-position: 0;
+    }
+}
+@keyframes iconos {
+    0% {
+        transform: translate(-120px, 100%) scale(1.5);
+    }
+    100% {
+        transform: translate(0px, 0%) scale(1);
+    }
+}
+
+@keyframes footer {
+    0% {
+        background: #0000f5;
+    }
+
+    50% {
+        background: #6471df;
+    }
+    100% {
+        background: #0000f5;
+    }
+}
+@keyframes iconos-texto {
+    0% {
+        opacity: 0;
+        transform: translate(400%, 0px);
+    }
+    100% {
+        opacity: 1;
+
+        transform: translate(0px, 0%);
+    }
+}
+@keyframes iconos-boton {
+    0% {
+        opacity: 0;
+        transform: translate(0px, -100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px, 0%);
+    }
+}
+@keyframes perfil {
+    0% {
+        filter: blur(10px);
+    }
+    100% {
+        filter: blur(0px);
+    }
+}
+@keyframes raton {
+    0% {
+        transform: translate(0px, 10px);
+    }
+    60% {
+        transform: translate(-130px, 10px);
+    }
+    100% {
+        transform: translate(0px, 10px);
+    }
+}
+@keyframes bordecolorines {
+    0% {
+        border: 6px solid rgb(245 222 179 / 44%);
+    }
+    50% {
+        border: 6px solid #f9c15a;
+    }
+    100% {
+        border: 6px solid rgb(245 222 179 / 44%);
+    }
+}
+@keyframes perfilseis {
+    0% {
+        border: 2px dashed;
+        margin-bottom: 0px;
+        margin-top: -2px;
+    }
+    50% {
+        border: 8px dashed;
+        margin-top: -8px;
+        margin-bottom: -6px;
+    }
+    100% {
+        border: 2px dashed;
+        margin-bottom: 0px;
+        margin-top: -2px;
+    }
+}
+@keyframes perfil2 {
+    0% {
+        filter: contrast(4.5);
+    }
+    100% {
+        filter: contrast(1);
+    }
+}
+@keyframes rotacion {
+    0% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(9000deg);
+    }
+}
+@keyframes irradiar {
+    0% {
+        border: 1px solid red;
+    }
+    50% {
+        border: 30px solid red;
+    }
+    100% {
+        border: 1px solid red;
+    }
+}
+@keyframes irradiarh3 {
+    0% {
+        border-radius: 0%;
+    }
+    100% {
+        border-radius: 10%;
+    }
+}
+@keyframes react {
+    0% {
+        border-radius: 0%;
+    }
+    100% {
+        border-radius: 10%;
+    }
+}
+@keyframes colores {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes textolink {
+    0% {
+        font-size: xxx-large;
+    }
+    100% {
+        font-size: x-large;
+    }
+}
+@keyframes imghover {
+    0% {
+        width: 95%;
+    }
+    50% {
+        width: 100%;
+    }
+}
+@keyframes aparecer {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+@keyframes activeIZQ {
+    0% {
+        left: -20px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+@keyframes activeDER {
+    0% {
+        right: 20px;
+    }
+    100% {
+        right: 0px;
+    }
+}
