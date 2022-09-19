@@ -4,14 +4,10 @@
     background: #2c2c2c;
     padding: 60px;
     position: relative;
-    /*     border-top: 17px solid #ff8b00;
-    border-top: 7px solid #ff8b00; */
-    /*     background: linear-gradient(182deg, #ff8b00, #000000eb); */
     border-top: 6px solid $color-footer;
     background: linear-gradient(182deg, $color-footer, #000000);
     border-top: 6px solid #0000ff00;
     background: #2c2c2c;
-    /*   animation:2s footer infinite; */
     .icono {
         justify-content: center;
         align-content: center;
@@ -21,10 +17,6 @@
             width: 100px;
             z-index: 1;
             position: relative;
-            /*             border-radius: 50%;
-            border: 7px solid #ff8b00;
-            border: 16px solid #2c2c2c;
-            box-shadow: 1px -5px 5px #000000a3; */
             border: 9px solid #2c2c2c;
             border-radius: 50%;
             background: #2c2c2c;
@@ -35,7 +27,6 @@
             border-radius: 6px;
             color: white;
             z-index: 0;
-            font-weight: bold;
         }
     }
 

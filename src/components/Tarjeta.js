@@ -9,9 +9,9 @@ export default function Tarjeta(props) {
 
     const variants = {
         visible: { opacity: 1, y: 0, rotate: 0 },
-        hidden: { opacity: 0, y: -100, rotate: 50 },
+        hidden: { opacity: 0, y: -100, rotate: 10 },
         exit: { scale: 2 },
-       /*  transition: {duration:1,times:[0,0.1,0.2]} */
+        /*  transition: {duration:1,times:[0,0.1,0.2]} */
     }
     useEffect(() => {
         if (inView) {
@@ -21,11 +21,13 @@ export default function Tarjeta(props) {
     }, [control, inView])
     if (estado === 1 && props.lle === llave && props.activo === props.lle) {
         return (
-            <div className="card nuevo" onClick={() => { cambiarEstado([2, props.lle]) }}>
-                <div className="ppl-thumbnail menos">
+            <div className="card nuevo" 
+            /*style={{background:"url(./img/ecommerce.jpg)",backgroundPosition:'center',backgroundSize:'cover'}} */
+            onClick={() => { cambiarEstado([2, props.lle]) }}>
+{/*                 <div className="ppl-thumbnail menos">
                     <img src={"./img/" + props.proyecto.imagen} alt="" />
                     <b>{props.proyecto.categoria}</b>
-                </div>
+                </div> */}
                 <div className="tecnologias">
                     <p>{props.proyecto.descripcion}</p>
                 </div>
@@ -33,7 +35,7 @@ export default function Tarjeta(props) {
         )
     }
     return (
-        <motion.div variants={variants} ref={ref} initial='hidden' animate={control} exit='exit' className="card" onClick={() => { cambiarEstado([1, props.lle]); props.setActivo(props.lle) }}>
+        <motion.div whileTap={{scale:1.03,borderRadius:'0px'}} variants={variants} ref={ref} initial='hidden' animate={control} exit='exit' className="card" onClick={() => { cambiarEstado([1, props.lle]); props.setActivo(props.lle) }}>
             <div className="ppl-thumbnail ">
                 <img src={"./img/" + props.proyecto.imagen} alt="" />
                 <b>{props.proyecto.categoria}</b>
@@ -41,7 +43,7 @@ export default function Tarjeta(props) {
             <div className="tecnologias">
                 {props.proyecto.tecnologias.map((tech) => {
                     return (
-                        <img src={"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/" + tech.toLowerCase() + "/" + tech.toLowerCase() + "-original.svg"} alt=""></img>
+                        <img src={"./img/" + tech.toLowerCase() + ".svg"} alt=""></img>
                     )
                 })}
             </div>
