@@ -6,7 +6,7 @@ export default function Web() {
     const { scrollY } = useScroll()
     const varianteWeb = {
         visible: { y: 0, opacity: 1 },
-        hidden: { y: '-50px', opacity: 0 },
+        hidden: { /* y: '-50px', */ opacity: 0 },
     }
     useEffect(() => {
         scrollY.onChange((latest) => {

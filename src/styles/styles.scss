@@ -10,29 +10,16 @@ $segundo-plano: goldenrod;
     margin-top: 40px;
     overflow-x: hidden;
     .plus {
-        position: absolute;
-        margin: auto;
-        left: 0px;
-        font-size: large;
-        top: 30%;
-        background: #80808000;
         padding: 6px 10px;
-        /*         box-shadow: 12px 0px 11px rgb(0 0 0 / 10%); */
-        /*         border-radius: 10px; */
-        font-family: "Josefin Sans";
-        position: absolute;
+        width: fit-content;
         margin: auto;
-        left: 0px;
-        font-size: large;
-        top: 21%;
-        color: $segundo-plano;
-        background: rgba(128, 128, 128, 0);
-        padding: 6px 4px;
-        font-family: "Josefin Sans";
-        z-index: 99999;
-        /*         border-bottom: 2px solid gainsboro; */
+        font-size: small;
+        background: rgb(0 0 0 / 24%);
+        border-radius: 6px;
+        color: rgb(218 165 32);
         img {
-            width: 50px;
+            width: 16px;
+            padding-left: 7px;
         }
     }
 }
@@ -128,12 +115,16 @@ $segundo-plano: goldenrod;
             -webkit-background-clip: text;
             background-clip: text;
             margin-top: -116px;
+            margin-top: -145px;
             background-size: cover;
             background-position: -5px;
             background-image: url(/img/fondoweb3.jpg);
-            rotate: -10deg;
+           /*  rotate: -10deg; */
             z-index: -1;
             position: relative;
+            @media (max-width:450px){
+                margin-top: -119px;
+            }
         }
         .web {
             border: none;
@@ -201,29 +192,18 @@ $segundo-plano: goldenrod;
         }
         b {
             display: block;
-            font-size: xx-large;
-            font-weight: bold;
-            border-radius: 6px;
             padding: 10px;
-            font-family: "Questrial";
-            color: #934949;
-            margin-bottom: 10px;
             position: relative;
             z-index: 1;
             margin-bottom: 25px;
-            color: #8493ff;
-            font-size: 40px;
-            font-size: 55px;
+            font-size: xxx-large;
             font-weight: bold;
-            font-family: Josefin Sans;
-            color: #000000;
+            font-family: "Koulen";
             color: white;
-            text-shadow: 0 0 5px #c8ff00;
-/*             text-shadow: 0 0 5px #0000003b; */
-            font-family: Caveat;
+            line-height: 1.2;
             i {
                 color: #fbff00;
-/*                 font-size: 61px;
+                /*                 font-size: 61px;
                 font-size: 98px; */
                 font-style: normal;
                 position: relative;
@@ -234,10 +214,14 @@ $segundo-plano: goldenrod;
             }
         }
         .whatsapp {
-            font-size: 60px;
+            font-size: xxx-large;
             color: white;
+            width: -moz-fit-content;
             width: fit-content;
-            margin: -29px auto 49px auto;
+            margin: 10px auto 49px auto;
+            &:nth-child(3) {
+                margin-top: 30px;
+            }
             &:hover {
                 filter: drop-shadow(2px 4px 6px black);
             }
@@ -263,13 +247,15 @@ $segundo-plano: goldenrod;
 }
 .techs {
     overflow: auto;
-    margin: 32px 0px -20px 0px;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 40% 40%;
     justify-content: center;
-    @media (max-width: 468px) {
+    opacity: 0.7;
+    max-width: 500px;
+    margin: auto;
+    /*     @media (max-width: 468px) {
         justify-content: initial;
-    }
+    } */
     li {
         position: relative;
         top: 0px;
@@ -300,7 +286,6 @@ $segundo-plano: goldenrod;
 }
 .fondowrapper {
     padding: 40px 0px;
-    margin-top: 40px;
     background-image: url("../img/stripes2.jpg");
     background-size: cover;
     box-sizing: border-box;
@@ -312,6 +297,8 @@ $segundo-plano: goldenrod;
     background: linear-gradient(45deg, rgb(255 233 0 / 29%), transparent);
     background: radial-gradient(#464646d6, #00000087);
     background: #343434;
+    background: linear-gradient(1deg, #343434, transparent);
+    background: linear-gradient(1deg, #343434, transparent, transparent);
     position: relative;
     &:before {
         /* content: ""; */

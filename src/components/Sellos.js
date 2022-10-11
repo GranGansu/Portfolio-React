@@ -9,41 +9,22 @@ function Tarjeta({ children, titulo, sub, insti, icono }) {
         hidden: { opacity: 0, scale: 0.8 },
         visible: { opacity: 1, scale: 1 },
     }
-    const imagen = {
-        hidden: { opacity: 0, scale: 0.6, rotate: '20deg' },
-        visible: { opacity: 1, scale: 1.1, rotate: 0 },
-    }
-    const titulo1 = {
-        hidden: { opacity: 0, translateX: '-100px' },
-        visible: { opacity: 1, translateX: '0px' },
-    }
-    const titulo2 = {
-        hidden: { opacity: 0, translateX: '100px' },
-        visible: { opacity: 1, translateX: '0px' },
-    }
-    const botonIOC = {
-        hidden: { opacity: 0, translateX: '50px' },
-        visible: { opacity: 1, translateX: '0px' },
-    }
     const control = useAnimation()
     const [ref, inView] = useInView({ threshold: 0.8 })
     useEffect(() => {
         if (inView) {
             control.start('visible')
         }
-        /*         else {
-                    control.start('hidden')
-                } */
     }, [control, inView])
-    return <motion.div whileHover={{ translate: '10px 20px', 'box-shadow': '0 0 5px yellow', cursor: 'pointer' }} whileTap={{ translate: '10px 20px' }}>
-        <motion.img src={'./img/' + icono + '.png'} alt="" className="iconos" variants={opacidad} ref={ref} initial='hidden' animate={control} transition={{ delay: 0, duration: duracionImagen }}></motion.img>
-        <motion.p variants={opacidad} ref={ref} initial='hidden' animate={control} transition={{ duration: duracion }}>{titulo}
+    return <motion.div variants={opacidad} ref={ref} initial='hidden' animate={control} whileHover={{ translate: '10px 20px', 'box-shadow': '0 0 5px yellow', cursor: 'pointer' }} whileTap={{ translate: '10px 20px' }}>
+        <motion.img src={'./img/' + icono + '.png'} alt="" className="iconos" ref={ref} initial='hidden' animate={control} transition={{ delay: 0, duration: duracionImagen }}></motion.img>
+        <motion.p ref={ref} initial='hidden' animate={control} transition={{ duration: duracion }}>{titulo}
 
         </motion.p>
-        <motion.p variants={opacidad} ref={ref} initial='hidden' animate={control} transition={{ duration: duracion }}>{sub}
+        <motion.p ref={ref} initial='hidden' animate={control} transition={{ duration: duracion }}>{sub}
 
         </motion.p>
-        <motion.button variants={botonIOC} ref={ref} initial='hidden' animate={control} transition={{ duration: duracion }}>{insti}<div className='dot'></div></motion.button>
+        <motion.button ref={ref} initial='hidden' animate={control} transition={{ duration: duracion }}>{insti}<div className='dot'></div></motion.button>
         {children}
     </motion.div>
 }
@@ -51,10 +32,9 @@ function Tarjeta({ children, titulo, sub, insti, icono }) {
 export default function Sellos() {
     return (
         <>
-            <hr></hr>
             <div className="fondowrapper">
                 <div className="h2">
-                    <span >Medallas</span>
+                    <span>Medallas</span>
                 </div>
                 <div id="sellos">
                     <Tarjeta titulo='Bootcamp' sub='React' insti='IT ACADEMY' icono='medal2'>

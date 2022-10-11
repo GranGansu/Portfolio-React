@@ -10,9 +10,9 @@ export default function Home() {
             visible: { filter: 'blur(0px)', scale: 1 },
             hidden: { filter: 'blur(6px)', scale: 0 },
         }
-        const boton = cambiar ? 'contacto >' : '< volver'
+        const boton = cambiar ? <>contacto< img src="./img/right-arrow.png" alt=''></img></> : '< volver'
         return (
-            <motion.div whileHover={{scale:1.1}} variants={variantePlus} initial='hidden' animate='visible' className="plus">{boton}</motion.div>
+            <motion.div whileHover={{ scale: 1.1 }} variants={variantePlus} initial='hidden' animate='visible' className="plus">{boton}</motion.div>
         )
     }
     function Condicional() {
@@ -26,7 +26,7 @@ export default function Home() {
         }
         const recado = cambiar ? <motion.div variants={varianteFicha} animate='visible' initial='hidden' exit={{ rotate: '130deg' }} className="perfil" onClick={() => { setCambiar(!cambiar) }}>
             <h3 className="programador">
-            <Botoncito />
+                <Botoncito />
                 <b><i>A</i>lan <i>S</i>ztamfater</b>
                 <span className="textonormal">Programador <i>&</i> Diseñador</span>
                 <Web />
@@ -36,7 +36,7 @@ export default function Home() {
                 setCambiar(!cambiar)
         }}>
             <h3 className="programador">
-            <Botoncito />
+                <Botoncito />
                 <span className="whatsapp">e-mail</span>
                 <span className="whatsapp">WHATSAPP</span>
             </h3>
@@ -44,7 +44,7 @@ export default function Home() {
 
         return (
             <AnimatePresence>
-                
+
                 {recado}
             </AnimatePresence>
         )
@@ -55,13 +55,13 @@ export default function Home() {
         { name: 'MySQL', img: 'mysql' },
         { name: 'java', img: 'java' },
         { name: 'CSS3', img: 'css' },
-        { name: 'PHP', img: 'php' },
+        /*         { name: 'PHP', img: 'php' }, */
         { name: 'NodeJS', img: 'nodejs' },
     ]
     return (
         <div id="home">
             <Condicional />
-            <h3 className="code none">Tecnologías</h3>
+            <h3 className="code">Tecnologías</h3>
             <ul className="techs">
                 {techs.map((elemento) => {
                     return (<li className="conImagen">{<img src={'./img/' + elemento.img + '.svg'} alt="" />}
