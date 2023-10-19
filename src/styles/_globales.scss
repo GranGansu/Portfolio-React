@@ -105,9 +105,8 @@ h1 {
     margin: auto;
     border-radius: 10px;
     padding: 5px 20px;
-    color: #fbff00;
-    color: gold;
-    font-size: large;
+    color: goldenrod;
+    font-size: x-large;
     margin-bottom: 20px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -135,7 +134,7 @@ h2 {
         margin-top: 16px;
     }
 }
-h3 {
+.h3 {
     padding: 10px 30px;
     width: -moz-fit-content;
     width: fit-content;
@@ -143,26 +142,22 @@ h3 {
     display: block;
     margin: auto;
     color: gold;
-    font-family: Oswald;
+    /* font-family: Oswald; */
     font-size: large;
-    text-transform: uppercase;
     margin-bottom: 26px;
     i {
         color: white;
     }
     span {
-        font-size: 80px;
-        font-size: 200px;
-        font-size: 250px;
-        text-transform: uppercase;
-        font-family: Koulen;
-        display: block;
-        margin-top: -29px;
-        margin-bottom: -31px;
-        color: #ffeb00ab;
-        @media (max-width: 467px) {
-            font-size: 200px;
-        }
+        margin-left: -6px;
+        margin-right: -2px;
+        position: relative;
+        z-index: 99999;
+        top: 2px;
+        font-size: 57px;
+        color: rgb(218 165 32);
+        line-height: 0;
+        padding: 0;
     }
     &:hover {
         border-radius: 21px;

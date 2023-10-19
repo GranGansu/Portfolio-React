@@ -29,33 +29,29 @@ $width-after: 10px;
     div {
         margin-right: 15px;
         margin-left: 15px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         border: 1px solid #ffffff36;
         border: 2px solid hsl(0deg 98% 82%);
         border: 2px solid #fea4a44f;
         padding: 15px;
         border-radius: 10px;
         box-shadow: 0 0 5px black;
+        text-align: left;
         @media (max-width: 450px) {
             width: 100%;
             max-width: 250px;
             margin: auto;
-            margin-bottom: 40px;
+            margin-bottom: 12px;
         }
         p:nth-child(2) {
             color: yellow !important;
         }
         button {
-            font-size: small;
-            color: #007effad;
-            color: rgb(0 0 0);
-            padding: 2px 15px;
-            border-radius: 3px;
-            border: 2px solid white;
-            margin-top: 9px;
-            color: rgb(255 163 163);
-            background: none;
-            position: relative;
+            font-size: large;
+            padding: 0px 9px;
+            /* border-left: 2px solid rgb(190, 190, 190); */
+            margin-top: 15px;
+            color: rgb(169 169 169);
             font-family: "Koulen";
             .dot {
                 position: absolute;
@@ -75,17 +71,12 @@ $width-after: 10px;
         }
     }
     p {
-        padding: 0 20px 20px 20px;
-        margin: 10px 20px;
         display: flex;
-        justify-content: space-around;
-        align-items: center;
         flex-direction: column;
-        font-size: large;
+        font-size: x-large;
         color: white;
-        border-radius: 10px;
-        padding: 0px;
-        margin: -1px 20px;
+        margin: -1px 10px;
+        text-align: left;
         &:hover {
             left: 20px;
             transition-duration: 500ms;

@@ -48,7 +48,7 @@
         border: 6px solid white;
         position: relative;
         background: white;
-/*         &::before {
+        /*         &::before {
             content: "";
             border-radius: 10px;
             position: absolute;
@@ -70,7 +70,7 @@
             object-fit: cover;
             border-radius: 6px 6px 0px 0px;
             border-radius: 3px 3px 0px 0px;
-/*             border: 1px solid #0000001a; */
+            /*             border: 1px solid #0000001a; */
             box-sizing: border-box;
             background: cornflowerblue;
         }
@@ -86,10 +86,11 @@
             color: #4e4e4e;
             margin: auto;
             position: relative;
-            top: -28px;
+            top: -15px;
             font-size: medium;
             display: block;
             border: 1px solid #9773b742;
+            margin-bottom: 22px;
         }
         p {
             font-family: "Questrial";
@@ -105,25 +106,25 @@
             }
         }
         &:hover {
-/*             top: -5px;
+            /*             top: -5px;
             position: relative; */
-            color:violet;
-            border: 6px solid ;
+            color: violet;
+            border: 6px solid;
             cursor: pointer;
-            &:nth-child(3){
+            &:nth-child(3) {
                 color: #6595ed;
             }
-            &:nth-child(2){
+            &:nth-child(2) {
                 color: #ffd301;
             }
-            &:nth-child(1){
-                color: #242e37;
+            &:nth-child(1) {
+                color: #3c4c5a;
             }
         }
     }
     .tecnologias {
-        /*         animation-name: perfil;
-        animation-duration: 1s; */
+        display: flex;
+        justify-content: center;
         img {
             width: 40px;
             box-shadow: none;
