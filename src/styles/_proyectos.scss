@@ -3,6 +3,9 @@
         animation-name: perfil;
         animation-duration: 0.2s;
         animation: 3.8s ease-out 0.2s 1 normal backwards running fade-in;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     /*     &::before {
         content: "";
@@ -42,25 +45,11 @@
         width: 300px;
         font-family: "Koulen";
         font-size: large;
-        background: url(/img/vector.webp);
-        /*     background: linear-gradient(45deg, #fff8ea, white); */
         box-shadow: 0 0 5px rgb(0 0 0 / 15%);
         border: 6px solid white;
         position: relative;
         background: white;
-        /*         &::before {
-            content: "";
-            border-radius: 10px;
-            position: absolute;
-            width: 300px;
-            height: 100%;
-            z-index: -1;
-            left: 0px;
-            font-family: "Koulen";
-            font-size: large;
-            box-shadow: 0 0 5px rgb(0 0 0 / 15%);
-            border: 6px solid white;
-        } */
+        height: 370px;
 
         .ppl-thumbnail img {
             width: 100%;

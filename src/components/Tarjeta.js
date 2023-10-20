@@ -38,7 +38,7 @@ export default function Tarjeta(props) {
   }
   return (
     <motion.div
-      whileTap={{ scale: 1.03, borderRadius: '0px' }}
+      whileTap={{ scale: 1.03, borderRadius: '10px' }}
       variants={variants}
       ref={ref}
       initial='hidden'
@@ -49,14 +49,16 @@ export default function Tarjeta(props) {
         cambiarEstado([1, props.lle]);
         props.setActivo(props.lle);
       }}>
-      <div className='ppl-thumbnail '>
-        <img src={'./img/' + props.proyecto.imagen} alt='' />
-        <b>{props.proyecto.categoria}</b>
-      </div>
-      <div className='tecnologias'>
-        {props.proyecto.tecnologias.map((tech) => {
-          return <img src={'./img/' + tech.toLowerCase() + '.svg'} alt=''></img>;
-        })}
+      <div>
+        <div className='ppl-thumbnail '>
+          <img src={'./img/' + props.proyecto.imagen} alt='' />
+          <b>{props.proyecto.categoria}</b>
+        </div>
+        <div className='tecnologias'>
+          {props.proyecto.tecnologias.map((tech) => {
+            return <img src={'./img/' + tech.toLowerCase() + '.svg'} alt=''></img>;
+          })}
+        </div>
       </div>
     </motion.div>
   );
