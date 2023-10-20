@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import Sellos from './Sellos';
 import Web from './Web';
 import { motion, AnimatePresence } from 'framer-motion';
+import Toast from './Toast';
 
 export default function Home() {
   const [cambiar, setCambiar] = useState(true);
+  const [[toast, mensaje], setToast] = useState([false, '']);
   function Botoncito() {
     const variantePlus = {
       visible: { filter: 'blur(0px)', scale: 1 },
@@ -17,6 +19,7 @@ export default function Home() {
       </motion.div>
     );
   }
+
   function Condicional() {
     const varianteFicha = {
       visible: { rotate: 0, filter: 'blur(0px)', scale: 1 },
@@ -58,15 +61,17 @@ export default function Home() {
         <h3 className='programador gap-y-6 flex flex-col'>
           <Botoncito />
           <span
-            onClick={() => {
-              alert('email');
+            onClick={(e) => {
+              e.stopPropagation();
+              setToast([true, 'E-Mail copiado']);
             }}
             className='border p-2 text-white text-xl rounded w-fit mx-auto'>
             E-Mail
           </span>
           <span
-            onClick={() => {
-              alert('whatsapp');
+            onClick={(e) => {
+              e.stopPropagation();
+              setToast([true, 'Número copiado']);
             }}
             className='border p-2 text-white text-xl rounded w-fit mx-auto'>
             Whatsapp
@@ -88,6 +93,7 @@ export default function Home() {
   return (
     <div id='home'>
       <Condicional />
+      {toast && <Toast set={setToast} mensaje={mensaje} />}
       <ul className='techs mt-8'>
         {techs.map((elemento) => {
           return (

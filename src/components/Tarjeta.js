@@ -3,7 +3,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 export default function Tarjeta(props) {
-  const [[estado, llave], cambiarEstado] = useState([1, 6]);
+  const [active, setActive] = useState(false);
   const control = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.8 });
 
@@ -11,50 +11,42 @@ export default function Tarjeta(props) {
     visible: { opacity: 1, y: 0, rotate: 0 },
     hidden: { opacity: 0, y: -100, rotate: 10 },
     exit: { scale: 2 },
-    /*  transition: {duration:1,times:[0,0.1,0.2]} */
   };
   useEffect(() => {
     if (inView) {
       control.start('visible');
     }
   }, [control, inView]);
-  if (estado === 1 && props.lle === llave && props.activo === props.lle) {
-    return (
-      <div
-        className='card nuevo'
-        /*style={{background:"url(./img/ecommerce.jpg)",backgroundPosition:'center',backgroundSize:'cover'}} */
-        onClick={() => {
-          cambiarEstado([2, props.lle]);
-        }}>
-        {/*                 <div className="ppl-thumbnail menos">
-                    <img src={"./img/" + props.proyecto.imagen} alt="" />
-                    <b>{props.proyecto.categoria}</b>
-                </div> */}
-        <div className='tecnologias'>
-          <p>{props.proyecto.descripcion}</p>
-        </div>
-      </div>
-    );
-  }
+
   return (
     <motion.div
       whileTap={{ scale: 1.03, borderRadius: '10px' }}
+      onClick={() => {
+        setActive((prev) => !prev);
+      }}
+      onHoverStart={() => {
+        setActive(true);
+      }}
+      onHoverEnd={() => {
+        setActive(false);
+      }}
       variants={variants}
       ref={ref}
       initial='hidden'
       animate={control}
       exit='exit'
-      className='card'
-      onClick={() => {
-        cambiarEstado([1, props.lle]);
-        props.setActivo(props.lle);
-      }}>
+      className='card'>
       <div>
+        <div className='absolute flex flex-col items-center justify-center h-full w-full'>
+          <p className=' text-black font-bold text-xl' style={{ paddingTop: '10px', display: active ? 'flex' : 'none' }}>
+            {props.proyecto.descripcion}
+          </p>
+        </div>
         <div className='ppl-thumbnail '>
-          <img src={'./img/' + props.proyecto.imagen} alt='' />
+          <motion.img animate={{ height: active ? 0 : 200 }} src={'./img/' + props.proyecto.imagen} alt='' />
           <b>{props.proyecto.categoria}</b>
         </div>
-        <div className='tecnologias'>
+        <div className='tecnologias' style={{ display: active && 'none' }}>
           {props.proyecto.tecnologias.map((tech) => {
             return <img src={'./img/' + tech.toLowerCase() + '.svg'} alt=''></img>;
           })}

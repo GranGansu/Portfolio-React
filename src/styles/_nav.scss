@@ -18,13 +18,16 @@ nav ul {
         display: inline;
         margin-right: 10px;
         text-transform: uppercase;
-        font-size: xxx-large;
+        font-size: calc(20px + 3vw);
         font-weight: bold;
         border: none;
         color: goldenrod;
-        &:active {
+        /*         &:active {
             animation-name: textolink;
             animation-duration: 2.5s;
+        } */
+        @media (min-width: 1200px) {
+            font-size: 55px;
         }
     }
 }
