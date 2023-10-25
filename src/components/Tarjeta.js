@@ -38,9 +38,15 @@ export default function Tarjeta(props) {
       className='card'>
       <div>
         <div className='absolute flex flex-col items-center justify-center h-full w-full'>
-          <p className=' text-black font-bold text-xl' style={{ paddingTop: '10px', display: active ? 'flex' : 'none' }}>
-            {props.proyecto.descripcion}
-          </p>
+          <div className='flex flex-col' style={{ paddingTop: '10px', display: active ? 'flex' : 'none' }}>
+            <p className=' text-black font-bold text-2xl'>{props.proyecto.descripcion}</p>
+
+            {props.proyecto.url && (
+              <a href={props.proyecto.url} className='hover:scale-110'>
+                Enlace GitHub
+              </a>
+            )}
+          </div>
         </div>
         <div className='ppl-thumbnail '>
           <motion.img animate={{ height: active ? 0 : 200 }} src={'./img/' + props.proyecto.imagen} alt='' />

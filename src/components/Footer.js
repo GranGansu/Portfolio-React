@@ -13,15 +13,14 @@ export default function Footer() {
       </div>
       <ul>
         <li>
-          <img src='/img/prestashop-icon.png' alt=''></img>e-commerce
+          <a href='https://github.com/GranGansu'>GitHub</a>
         </li>
         <li>
-          <img src='/img/blogger-icon.png' alt='' />
-          Blogs personales
+          <a href='https://www.linkedin.com/in/alan-sztamfater/'>Linkedin</a>
         </li>
-        <li>
-          <img src='/img/instagram.png' alt=''></img>Tienda
-        </li>
+        {/*         <li>
+          <a href='https://github.com/GranGansu'>GitHub</a>
+        </li> */}
       </ul>
     </motion.div>
   );

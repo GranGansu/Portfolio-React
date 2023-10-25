@@ -50,7 +50,10 @@
         align-content: center;
         align-items: center;
         border: 2px solid #fde047;
-        padding-right: 10px;
+        /* padding-right: 10px; */
+        a {
+            padding: 0px 10px;
+        }
         &:hover {
             border: 2px solid gold;
         }
